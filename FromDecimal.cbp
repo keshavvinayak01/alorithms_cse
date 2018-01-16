@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int FromDecimal(int n,int b)
+{
+    int result = 0,multiplier = 1;
+    while(n>0)
+    {
+        result += (n%b)*multiplier ;
+        multiplier *= 10;
+        n = n/b;
+    }
+    return result;
+}
+
+
+int main()
+{
+    int n,b,result;
+    printf("enter the number and the base\n");
+    scanf("%d",&n);
+    scanf("%d",&b);
+    result = FromDecimal(n,b);
+    printf("converted to base ");
+    printf("%d : %d",b,result);
+    return 0;
+}

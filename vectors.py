@@ -25,7 +25,7 @@ def dot(a,b,c):
 def distance(a,b):
     d1 = b[0] - a[0]
     d2 = b[1] - a[1]
-    return((d1^2 + d2^2)**(1/2.0))    
+    return((d1^2 + d2^2)**(1/2.0))    #return the value of function distance
     
 
 def caldist(a,b,c,isSegment):

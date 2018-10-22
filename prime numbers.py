@@ -1,16 +1,14 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
-T = input()
-for i in range(T):
-    N = input()
-    if(N %2 != 0):
-        print(0)
+test_cases=int(input("Enter the number of the test cases: "))
+for i in range(test_cases):
+    flag=0
+    n=int(input("Enter the number to check whether it is prime or not : "))
+    for j in range(2,int(n**(0.5))+1):
+        if n%j==0:
+            flag=1
+            break
+        else:
+            flag=0
+    if flag==1:
+        print("Not a prime number. ")
     else:
-        count = 0
-        for j in xrange(1,(N**(1/2)) + 1):
-            if(N%j == 0):                
-                if(j%2 == 0):
-                    count += 1
-                if((N/j)%2 == 0 and N/j != j):
-                    
-                    count += 1
-        print count
+        print("It is prime. ")

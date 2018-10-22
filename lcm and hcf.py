@@ -1,6 +1,6 @@
 def GCD(x,y):
     if(y == 0):
-        return x
+        return (x)
     return(GCD(y,x%y))
 
 
@@ -8,7 +8,6 @@ def LCM(x,y):
     return(x*y/GCD(x,y))
 
 
-a,b = raw_input("enter the numbers").strip().split(' ')
-a,b = [int(a),int(b)]
+a,b = map(int,input().split())
 print(GCD(a,b))
-print(LCM(a,b))
+print(int(LCM(a,b)))
